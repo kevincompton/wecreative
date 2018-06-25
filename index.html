@@ -1,0 +1,206 @@
+<html>
+  <head>
+    <title>We Creative | Collaboration Platform</title>
+      <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html, body {
+        font-family: 'Work Sans', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        color: #333;
+        text-align:center;
+      }
+        
+        body.creatives {
+            background: black;
+            color: white;
+        }
+
+      .center-text {
+        text-align: center;
+      }
+
+      main {
+        margin-top: 100px;
+        padding: 20px;
+      }
+
+      img.logo {
+        display: block;
+        margin: 0 auto;
+        max-width: 350px;
+        margin-bottom: 15px;
+      }
+
+      h2 {
+        font-size: 1.5em;
+        font-weight: 100;
+          margin-bottom: 45px;
+      }
+        
+      h3 {
+        margin: 80px auto;
+        letter-spacing: 1px;
+        font-size: 1.8em;
+      }
+        
+        h3 span.active {
+            background: black;
+            color: white;
+            padding: 15px;
+            cursor: auto;
+        }
+        
+        h3 span {
+            cursor: pointer;
+        }
+
+      footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 20px;
+      }
+
+      footer p {
+        font-weight: 300;
+        font-size: 1.0em;
+      }
+
+      a {
+        color: black;
+        text-decoration: none;
+      }
+    
+        input {
+            width: 100%;
+            border: 0;
+            border-bottom: 1px solid black;
+            font-size: 1.7em;
+            position: relative;
+            text-indent: 30px;
+            line-height: 45px;
+            outline: none;
+            color: transparent;
+            text-shadow: 0 0 0 black;
+            font-weight: 100;
+        }
+        
+        input:focus {
+            outline: none;
+        }
+        
+        .form-wrap {
+            position: relative;
+            display: block;
+            width: 25%;
+            margin: auto;
+            height: 45px;
+            margin-top: 80px;
+        }
+        .form-wrap:before {
+            position: absolute;
+            content: '';
+            bottom: 10px;
+            width: 7px;
+            height: 50%;
+            background: black;
+            left: 0;
+            z-index: 333;
+        }
+        span.strike {
+            text-decoration: line-through;
+        }
+        .toolbar {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 25px;
+            text-transform: uppercase;
+            font-size: 0.8em;
+        }
+
+      a:hover,
+      a:focus {
+        color: #31D8A0;
+        text-decoration: none;
+      }
+        ::placeholder {
+            color: #ccc;
+        }
+        
+        .form-wrap:before {
+          animation: blink-animation 1s steps(5, start) infinite;
+          -webkit-animation: blink-animation 1s steps(5, start) infinite;
+        }
+        @keyframes blink-animation {
+          to {
+            visibility: hidden;
+          }
+        }
+        @-webkit-keyframes blink-animation {
+          to {
+            visibility: hidden;
+          }
+        }
+    </style>
+  </head>
+  <body class="brands">
+    <main class="container">
+      <div class="toolbar">
+        <a href="#">Login</a>  
+      </div>
+      <h1 class="center-text"><img class="logo" src="logo.svg" /></h1>
+      <h2>THE AGENCY PLATFORM</h2>
+      
+      <h3>Connecting <span data-landing="brands" class="active">Brands</span> with <span data-landing="creatives">Creatives</span></h3>
+    
+      <p>We Creative connects you directly to world class creatives, influencers, strategists & technologists.</p>
+        
+        
+        
+      <!-- <ul>
+        <li>We only partner with the best</li>
+        <li>Find brand partners for your ideas</li>
+        <li>Gifting & Travel Opportunities</li>
+      </ul>
+        
+      <h3>For Brands</h3>
+      <ul>
+        <li>Access  our network of creative & technical talent</li>
+        <li>Personalized Influencer Dashboard</li>
+        <li>Exchange ideas & feedback with tastemakers</li>
+      </ul> -->
+    
+      <span class="form-wrap"><input autofocus placeholder="What do you want to build today?"></span>
+      
+      
+      <footer>
+        <!-- <p class="center-text">For more information on Feathers see <a href="https://docs.feathersjs.com" title="Feathers Documentation" target="blank">docs.feathersjs.com</a>.</p> -->
+      </footer>
+    </main>
+      
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script>
+        var landing = "brands";
+        
+        $('h3 span').click(function(){
+           landing = $(this).data('landing');
+           $('body').attr('class', landing);
+            
+            $('h3 span').removeClass('class', 'active');
+            $(this).attr('class', 'active');
+        });  
+    </script>
+  </body>
+</html>
