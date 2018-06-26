@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+h1, h2, h3 {
+  font-family: "Space Mono", monospace; }
+
+p {
+  font-size: 1.4em; }
+
+h4 {
+  font-size: 1.5em;
+  font-weight: 100;
+  margin-bottom: 45px; }
+
+h3 {
+  margin: 80px auto;
+  letter-spacing: 1px;
+  font-size: 1.8em; }
+
+.center-text {
+  text-align: center; }
+
+a:hover,
+a:focus {
+  color: #31D8A0;
+  text-decoration: none; }
+
+a {
+  color: black;
+  text-decoration: none; }
+
+html, body {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  color: #333;
+  text-align: center; }
+
+button {
+  background: black;
+  border: 0;
+  border-radius: 0;
+  color: white;
+  font-size: 1.5em;
+  font-family: "Space Mono", monospace;
+  padding: 20px; }
+
+main {
+  margin-top: 50px;
+  padding: 20px; }
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  max-width: 350px;
+  margin-bottom: 15px; }
+
+.we-toolbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 25px;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  line-height: 18px; }
+  .we-toolbar svg {
+    float: right;
+    margin-left: 5px;
+    margin-top: -1px; }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px; }
+
+footer p {
+  font-weight: 300;
+  font-size: 1.0em; }
+
+body h3 > span {
+  padding: 15px;
+  cursor: pointer; }
+  body h3 > span.active {
+    cursor: auto;
+    background: black;
+    color: white; }
+
+body p.creatives-desc {
+  display: none; }
+
+body.creatives {
+  background: black;
+  color: white; }
+  body.creatives p.brands-desc {
+    display: none; }
+  body.creatives p.creatives-desc {
+    display: block; }
+  body.creatives #logo_svg .cls-1 {
+    fill: white !important; }
+  body.creatives h3 > span.active {
+    background: white;
+    color: black; }
+  body.creatives .we-toolbar a {
+    color: white; }
+    body.creatives .we-toolbar a svg path.cls-1 {
+      fill: white; }
+  body.creatives input {
+    border-color: white;
+    color: white; }
+  body.creatives input::placeholder {
+    color: white; }
+
+.form-wrap {
+  position: relative;
+  display: block;
+  width: 350px;
+  margin: auto;
+  height: 45px;
+  margin-top: 80px;
+  margin-bottom: 60px; }
+
+input {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid black;
+  font-size: 1.5em;
+  position: relative;
+  line-height: 50px;
+  outline: none;
+  text-shadow: 0 0 0 black;
+  font-weight: 100;
+  background: transparent;
+  text-indent: 8px; }
