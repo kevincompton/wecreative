@@ -6,11 +6,19 @@
 h1, h2, h3 {
   font-family: "Space Mono", monospace; }
 
+h1, h3.switcher {
+  font-size: 36px;
+  line-height: 70px;
+  font-weight: 100; }
+
 p {
-  font-size: 1.4em; }
+  font-size: 24px;
+  line-height: 28px;
+  text-align: left;
+  letter-spacing: 1px; }
 
 h4 {
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-weight: 100;
   margin-bottom: 45px; }
 
@@ -46,15 +54,25 @@ button {
   font-family: "Space Mono", monospace;
   padding: 20px; }
 
+section.main_copy {
+  margin: auto;
+  max-width: 700px;
+  Padding: 2rem 3rem 4rem;
+  border: 1px solid; }
+  section.main_copy p {
+    line-height: 2; }
+
 main {
-  margin-top: 50px;
-  padding: 20px; }
+  margin-top: 0px;
+  padding: 20px;
+  margin-bottom: 60px; }
 
 .logo {
   display: block;
   margin: 0 auto;
-  max-width: 350px;
-  margin-bottom: 15px; }
+  max-width: 250px;
+  margin-bottom: 15px;
+  z-index: 999; }
 
 .we-toolbar {
   position: absolute;
@@ -67,7 +85,49 @@ main {
   .we-toolbar svg {
     float: right;
     margin-left: 5px;
+    margin-top: -1px;
+    cursor: pointer; }
+
+.we-menu-toggle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 25px 20px;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  line-height: 18px;
+  cursor: pointer; }
+  .we-menu-toggle svg {
+    float: right;
+    margin-left: 5px;
     margin-top: -1px; }
+
+.we-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: black;
+  color: white;
+  z-index: 1;
+  display: none;
+  padding-top: 20px; }
+  .we-menu a {
+    color: white; }
+  .we-menu svg.we-collapse {
+    position: absolute;
+    left: 0;
+    margin-top: 3px;
+    margin-left: 25px;
+    cursor: pointer; }
+  .we-menu h1.text-center {
+    margin-top: 60px; }
+  .we-menu .cls-1 {
+    fill: white; }
+  .we-menu h1.logo-wrap svg {
+    float: none;
+    margin: 0 auto !important; }
 
 footer {
   position: absolute;
@@ -80,13 +140,17 @@ footer p {
   font-weight: 300;
   font-size: 1.0em; }
 
-body h3 > span {
+body h3.switcher > span {
   padding: 15px;
   cursor: pointer; }
-  body h3 > span.active {
+  body h3.switcher > span.active {
     cursor: auto;
     background: black;
     color: white; }
+
+@media screen and (max-width: 570px) {
+  body h3.switcher {
+    font-size: 1.3em; } }
 
 body p.creatives-desc {
   display: none; }
@@ -103,15 +167,18 @@ body.creatives {
   body.creatives h3 > span.active {
     background: white;
     color: black; }
-  body.creatives .we-toolbar a {
+  body.creatives .we-toolbar a, body.creatives .we-menu-toggle {
     color: white; }
-    body.creatives .we-toolbar a svg path.cls-1 {
+    body.creatives .we-toolbar a svg path.cls-1, body.creatives .we-menu-toggle svg path.cls-1 {
       fill: white; }
   body.creatives input {
     border-color: white;
     color: white; }
   body.creatives input::placeholder {
     color: white; }
+  body.creatives button {
+    background: white;
+    color: black; }
 
 .form-wrap {
   position: relative;
@@ -126,11 +193,13 @@ input {
   width: 100%;
   border: 0;
   border-bottom: 1px solid black;
-  font-size: 1.5em;
+  font-size: 14px;
+  text-transform: uppercase;
   position: relative;
   line-height: 50px;
   outline: none;
   text-shadow: 0 0 0 black;
   font-weight: 100;
   background: transparent;
-  text-indent: 8px; }
+  text-indent: 8px;
+  font-family: "Space Mono", monospace; }
